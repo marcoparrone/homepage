@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title= title
+    link(rel='shortcut icon', href=baseurl+'/favicon.ico')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content=description)
+    link(rel='manifest', href=baseurl+'/manifest.json')
+    link(rel='icon', href=baseurl+'/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href=baseurl+'/images/h-152.png')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='white')
+    meta(name='apple-mobile-web-app-title', content=title)
+    meta(name='msapplication-TileImage', content=baseurl+'/images/h-144.png')
+    meta(name='msapplication-TileColor', content='#000000')
+    meta(name='theme-color', content='white')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+  body
+    block content
