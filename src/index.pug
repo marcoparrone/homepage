@@ -84,15 +84,16 @@ block content
         p
         i(class='material-icons w3-xxlarge') location_on
         span #{location}
-    div(class='w3-content w3-justify w3-padding-64', id='disclaimer')
-      h2 #{disclaimer_title}
-      div(class='w3-section')
-        p #{disclaimer_content1}
-          br
-          span #{disclaimer_content2}
-        p #{disclaimer_content3}
-        p #{disclaimer_content4}
-        p #{disclaimer_content5}
+    if language != 'it' && language != 'en'
+      div(class='w3-content w3-justify w3-padding-64', id='disclaimer')
+        h2 #{disclaimer_title}
+        div(class='w3-section')
+          p #{disclaimer_content1}
+            br
+            span #{disclaimer_content2}
+          p #{disclaimer_content3}
+          p #{disclaimer_content4}
+          p #{disclaimer_content5}
   div(class='langsel')
     label(for='lang') #{choose_lang}
       select(id='lang', name='lang', value=language, onChange='save_and_change_language(document.getElementById("lang").value);')
