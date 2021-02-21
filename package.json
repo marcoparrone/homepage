@@ -1,16 +1,36 @@
 {
   "name": "homepage",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "Marco Parrone home page - with i18n",
+  "main": "src/homepage.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "predeploy": "npm run build",
+    "deploy": "mydeploy.sh homepage",
+    "start": "NODE_ENV=development node src/homepage.js; http-server build/",
+    "build": "NODE_ENV=production node src/homepage.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoparrone/homepage.git"
+  },
+  "keywords": [
+    "marco",
+    "parrone",
+    "home",
+    "page"
+  ],
+  "author": "Marco Parrone",
+  "bugs": {
+    "url": "https://github.com/marcoparrone/homepage/issues"
+  },
+  "homepage": "https://github.com/marcoparrone/homepage#readme",
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "@marcoparrone/translate-json": "^1.0.6",
+    "http-server": "^0.12.3"
   }
 }

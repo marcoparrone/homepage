@@ -1,0 +1,239 @@
+extends layout
+
+block content
+  // Icon Bar (Sidebar - hidden on small screens)
+  nav(class='w3-sidebar w3-bar-block w3-small w3-hide-small w3-center')
+    a(href='#', class='w3-bar-item w3-button w3-padding-large')
+      i(class='material-icons w3-xxlarge') home
+      p #{home}
+    a(href='#about', class='w3-bar-item w3-button w3-padding-large')
+      i(class='material-icons w3-xxlarge') account_circle
+      p #{about}
+    a(href='#apps', class='w3-bar-item w3-button w3-padding-large')
+      i(class='material-icons w3-xxlarge') get_app
+      p #{apps}
+    a(href='#contact', class='w3-bar-item w3-button w3-padding-large')
+      i(class='material-icons w3-xxlarge') email
+      p #{contact}
+  // Navbar on small screens (Hidden on medium and large screens)
+  div(class='w3-top w3-hide-large w3-hide-medium', id='myNavbar')
+    div(class='w3-bar w3-white w3-opacity w3-hover-opacity-off w3-center w3-small')
+      a(href='#', class='w3-bar-item w3-button', style='width:25% !important') #{home}
+      a(href='#about', class='w3-bar-item w3-button', style='width:25% !important') #{about}
+      a(href='#apps', class='w3-bar-item w3-button', style='width:25% !important') #{apps}
+      a(href='#contact', class='w3-bar-item w3-button', style='width:25% !important') #{contact}
+  div(class='w3-padding-large', id='main')
+    header(class='w3-container w3-padding-32 w3-center w3-white', id='home')
+      h1(class='w3-jumbo') #{title}
+        span(class='w3-hide-small') #{homepage}
+    div(class='w3-content w3-justify w3-padding-64', id='about')
+      h2 #{about_title}
+      div(class='w3-section')
+        p #{about_content}
+    div(class='w3-content w3-justify w3-padding-64', id='apps')
+      h2 #{apps_title}
+      div(class='w3-section')
+        p #{apps_content1}
+          i(class="material-icons w3-xxlarge") open_in_browser
+          br
+          span #{apps_content2}
+          i(class="material-icons w3-xxlarge") get_app
+        div(class='app-details-wrapper')
+          img(class='app-picture', src=baseurl+'/n-128.png', alt='Notes icon')
+          div(class='app-details')
+            span #{notes}
+            br
+            a(href='https://notes.marcoparrone.com', target='_blank', rel='noreferrer')
+              i(class='material-icons w3-xxlarge') open_in_browser
+            a(href='https://play.google.com/store/apps/details?id=com.marcoparrone.twa.notes', target='_blank', rel='noreferrer')
+              i(class='material-icons w3-xxlarge') get_app
+        div(class='app-details-wrapper')
+          img(class='app-picture', src=baseurl+'/b-128.png', alt='Bookmarks icon')
+          div(class='app-details')
+            span #{bookmarks}
+            br
+            a(href='https://bookmarks.marcoparrone.com', target='_blank', rel='noreferrer')
+              i(class='material-icons w3-xxlarge') open_in_browser
+            a(href='https://play.google.com/store/apps/details?id=com.marcoparrone.twa.bookmarks', target='_blank', rel='noreferrer')
+              i(class='material-icons w3-xxlarge') get_app
+        div(class='app-details-wrapper')
+          img(class='app-picture', src=baseurl+'/r-128.png', alt='Reminder icon')
+          div(class='app-details')
+            span #{reminder}
+            br
+            a(href='https://reminder.marcoparrone.com', target='_blank', rel='noreferrer')
+              i(class='material-icons w3-xxlarge') open_in_browser
+            a(href='https://play.google.com/store/apps/details?id=com.marcoparrone.twa.reminder', target='_blank', rel='noreferrer')
+              i(class='material-icons w3-xxlarge') get_app
+        div(class='app-details-wrapper')
+          img(class='app-picture', src=baseurl+'/t-128.png', alt='Tic tac toe icon')
+          div(class='app-details')
+            span #{tictactoe}
+            br
+            a(href='https://tic-tac-toe.marcoparrone.com', target='_blank', rel='noreferrer')
+              i(class='material-icons w3-xxlarge') open_in_browser
+            a(href='https://play.google.com/store/apps/details?id=com.marcoparrone.twa.tictactoe', target='_blank', rel='noreferrer')
+              i(class='material-icons w3-xxlarge') get_app
+    div(class='w3-content w3-justify w3-padding-64', id='contact')
+      h2 #{contact_title}
+      div(class='w3-section')
+        p
+        i(class='material-icons w3-xxlarge') email
+        span #{email}
+        a(href='mailto:marco@marcoparrone.com', target='_blank', rel='noreferrer') marco@marcoparrone.com
+        p
+        i(class='material-icons w3-xxlarge') location_on
+        span #{location}
+    div(class='w3-content w3-justify w3-padding-64', id='disclaimer')
+      h2 #{disclaimer_title}
+      div(class='w3-section')
+        p #{disclaimer_content1}
+          br
+          span #{disclaimer_content2}
+        p #{disclaimer_content3}
+        p #{disclaimer_content4}
+        p #{disclaimer_content5}
+  div(class='langsel')
+    label(for='lang') #{choose_lang}
+      select(id='lang', name='lang', value=language, onChange='save_and_change_language(document.getElementById("lang").value);')
+        option(value='af') Afrikaans
+        option(value='sq') Albanian
+        option(value='am') Amharic
+        option(value='ar') Arabic
+        option(value='hy') Armenian
+        option(value='az') Azerbaijani
+        option(value='eu') Basque
+        option(value='be') Belarusian
+        option(value='bn') Bengali
+        option(value='bs') Bosnian
+        option(value='bg') Bulgarian
+        option(value='ca') Catalan
+        option(value='ceb') Cebuano
+        option(value='ny') Chichewa
+        option(value='zh-CN') Chinese (Simplified)
+        option(value='zh-TW') Chinese (Traditional)
+        option(value='zh') Chinese (Simplified)
+        option(value='co') Corsican
+        option(value='hr') Croatian
+        option(value='cs') Czech
+        option(value='da') Danish
+        option(value='nl') Dutch
+        option(value='en') English
+        option(value='eo') Esperanto
+        option(value='et') Estonian
+        option(value='tl') Filipino
+        option(value='fi') Finnish
+        option(value='fr') French
+        option(value='fy') Frisian
+        option(value='gl') Galician
+        option(value='ka') Georgian
+        option(value='de') German
+        option(value='el') Greek
+        option(value='gu') Gujarati
+        option(value='ht') Haitian Creole
+        option(value='ha') Hausa
+        option(value='haw') Hawaiian
+        option(value='iw') Hebrew
+        option(value='he') Hebrew
+        option(value='hi') Hindi
+        option(value='hmn') Hmong
+        option(value='hu') Hungarian
+        option(value='is') Icelandic
+        option(value='ig') Igbo
+        option(value='id') Indonesian
+        option(value='ga') Irish
+        option(value='it') Italian
+        option(value='ja') Japanese
+        option(value='jw') Javanese
+        option(value='kn') Kannada
+        option(value='kk') Kazakh
+        option(value='km') Khmer
+        option(value='rw') Kinyarwanda
+        option(value='ko') Korean
+        option(value='ku') Kurdish (Kurmanji)
+        option(value='ky') Kyrgyz
+        option(value='lo') Lao
+        option(value='la') Latin
+        option(value='lv') Latvian
+        option(value='lt') Lithuanian
+        option(value='lb') Luxembourgish
+        option(value='mk') Macedonian
+        option(value='mg') Malagasy
+        option(value='ms') Malay
+        option(value='ml') Malayalam
+        option(value='mt') Maltese
+        option(value='mi') Maori
+        option(value='mr') Marathi
+        option(value='mn') Mongolian
+        option(value='my') Myanmar (Burmese)
+        option(value='ne') Nepali
+        option(value='no') Norwegian
+        option(value='or') Odia (Oriya)
+        option(value='ps') Pashto
+        option(value='fa') Persian
+        option(value='pl') Polish
+        option(value='pt') Portuguese
+        option(value='pa') Punjabi
+        option(value='ro') Romanian
+        option(value='ru') Russian
+        option(value='sm') Samoan
+        option(value='gd') Scots Gaelic
+        option(value='sr') Serbian
+        option(value='st') Sesotho
+        option(value='sn') Shona
+        option(value='sd') Sindhi
+        option(value='si') Sinhala
+        option(value='sk') Slovak
+        option(value='sl') Slovenian
+        option(value='so') Somali
+        option(value='es') Spanish
+        option(value='su') Sundanese
+        option(value='sw') Swahili
+        option(value='sv') Swedish
+        option(value='tg') Tajik
+        option(value='ta') Tamil
+        option(value='tt') Tatar
+        option(value='te') Telugu
+        option(value='th') Thai
+        option(value='tr') Turkish
+        option(value='tk') Turkmen
+        option(value='uk') Ukrainian
+        option(value='ur') Urdu
+        option(value='ug') Uyghur
+        option(value='uz') Uzbek
+        option(value='vi') Vietnamese
+        option(value='cy') Welsh
+        option(value='xh') Xhosa
+        option(value='yi') Yiddish
+        option(value='yo') Yoruba
+        option(value='zu') Zulu
+  script. 
+    const supported_languages = ['en', 'af', 'sq', 'am', 'ar', 'hy', 'az', 'eu', 'be', 'bn', 'bs', 'bg', 'ca', 'ceb', 'ny', 'zh-CN', 'zh-TW', 'co', 'hr', 'cs', 'da', 'nl', 'eo', 'et', 'tl', 'fi', 'fr', 'fy', 'gl', 'ka', 'de', 'el', 'gu', 'ht', 'ha', 'haw', 'iw', 'hi', 'hmn', 'hu', 'is', 'ig', 'id', 'ga', 'it', 'ja', 'jw', 'kn', 'kk', 'km', 'rw', 'ko', 'ku', 'ky', 'lo', 'la', 'lv', 'lt', 'lb', 'mk', 'mg', 'ms', 'ml', 'mt', 'mi', 'mr', 'mn', 'my', 'ne', 'no', 'or', 'ps', 'fa', 'pl', 'pt', 'pa', 'ro', 'ru', 'sm', 'gd', 'sr', 'st', 'sn', 'sd', 'si', 'sk', 'sl', 'so', 'es', 'su', 'sw', 'sv', 'tg', 'ta', 'tt', 'te', 'th', 'tr', 'tk', 'uk', 'ur', 'ug', 'uz', 'vi', 'cy', 'xh', 'yi', 'yo', 'zu', 'he', 'zh'];
+    var documentlanguage="#{language}";
+    var obj=document.getElementById("lang");
+    for (var i=0;i<obj.length;i++){if(obj.options[i].value===documentlanguage)obj.selectedIndex=i;}
+
+    function change_language () {
+      let newlang = localStorage.getItem('language');
+      if (!newlang || !supported_languages.includes(newlang)) {
+        newlang = navigator.languages.find(lang => {return supported_languages.includes(lang)});
+      }
+      if (newlang && newlang !== documentlanguage) {
+        if (supported_languages.includes(newlang)) {
+          documentlanguage = newlang;
+          window.open("index."+newlang+".html","_self");
+        }
+      }
+    }
+
+    function save_and_change_language (newlang) {
+      if (newlang && newlang !== documentlanguage) {
+        if (supported_languages.includes(newlang)) {
+          localStorage.setItem('language', newlang);
+          documentlanguage = newlang;
+          window.open("index."+newlang+".html","_self");
+        }
+      }
+    }
+
+    change_language();
