@@ -11,6 +11,7 @@
   "apps_title":"App",
   "apps_content1":"Puoi provare le app direttamente nel browser e puoi installarle anche da lì",
   "apps_content2":"Se hai uno smartphone Android, puoi anche installare le app da Google Play",
+  "apps_content3": "Se hai un PC Windows, puoi installarle dal Microsoft Store",
   "notes":"Appunti: un'app per salvare e organizzare le note.",
   "bookmarks":"Gestore segnalibri: un gestore di segnalibri indipendente dal browser.",
   "reminder":"Promemoria in loop: un'app che invia notifiche a intervalli di tempo definiti.",

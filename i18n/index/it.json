@@ -11,6 +11,7 @@
   "apps_title":"App",
   "apps_content1":"Puoi provare le app direttamente nel browser e puoi installarle anche da lì",
   "apps_content2":"Se hai uno smartphone Android, puoi anche installare le app da Google Play",
+  "apps_content3": "Se hai un PC Windows, puoi installarle dal Microsoft Store",
   "notes":"Appunti: un'app per salvare e organizzare le note.",
   "bookmarks":"Gestore segnalibri: un gestore di segnalibri indipendente dal browser.",
   "reminder":"Promemoria in loop: un'app che invia notifiche a intervalli di tempo definiti.",
@@ -23,6 +24,6 @@
   "disclaimer_content1":"Copyright © 2021 Marco Parrone.",
   "disclaimer_content2":"Tutti i diritti riservati.",
   "disclaimer_content3":"QUESTO SERVIZIO PUO' CONTENERE TRADUZIONI FORNITE DA GOOGLE. GOOGLE NON RICONOSCE ALCUNA GARANZIA RELATIVA ALLE TRADUZIONI, ESPLICITE O IMPLICITE, COMPRESA QUALSIASI GARANZIA DI PRECISIONE, AFFIDABILITÀ E QUALSIASI GARANZIA IMPLICITA DI COMMERCIABILITÀ, IDONEITÀ PER UNO SCOPO PARTICOLARE E NON VIOLAZIONE.",
-  "disclaimer_content4":"Questo sito web è stato tradotto per tua comodità utilizzando un software di traduzione fornito da Google Translate. Sono stati compiuti sforzi ragionevoli per fornire una traduzione accurata, tuttavia, nessuna traduzione automatica è perfetta né intende sostituire i traduttori umani. Le traduzioni vengono fornite come servizio agli utenti del sito web marcoparrone.com e vengono fornite \"così come sono\". Non viene fornita alcuna garanzia di alcun tipo, espressa o implicita, in merito all'accuratezza, affidabilità o correttezza delle traduzioni effettuate dall'inglese in qualsiasi altra lingua. Alcuni contenuti (come immagini, video, Flash, ecc.) Potrebbero non essere tradotti accuratamente a causa delle limitazioni del software di traduzione.",
+  "disclaimer_content4":"Questa applicazione web è stata tradotta per tua comodità utilizzando un software di traduzione fornito da Google Translate. Sono stati compiuti sforzi ragionevoli per fornire una traduzione accurata, tuttavia, nessuna traduzione automatica è perfetta né intende sostituire i traduttori umani. Le traduzioni vengono fornite come servizio agli utenti del sito web marcoparrone.com e vengono fornite \"così come sono\". Non viene fornita alcuna garanzia di alcun tipo, espressa o implicita, in merito all'accuratezza, affidabilità o correttezza delle traduzioni effettuate dall'inglese in qualsiasi altra lingua. Alcuni contenuti (come immagini, video, Flash, ecc.) Potrebbero non essere tradotti accuratamente a causa delle limitazioni del software di traduzione.",
   "disclaimer_content5":"Il testo ufficiale è la versione inglese del sito web. Eventuali discrepanze o differenze create nella traduzione non sono vincolanti e non hanno alcun effetto legale ai fini della conformità o dell'applicazione. In caso di domande relative all'accuratezza delle informazioni contenute nel sito Web tradotto, fare riferimento alla versione inglese del sito Web che è la versione ufficiale."
 }

@@ -7,7 +7,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "mydeploy.sh homepage",
-    "start": "NODE_ENV=development node src/homepage.js; http-server build/",
+    "start": "NODE_ENV=development node src/homepage.js; serve -l 3000 build/",
     "build": "NODE_ENV=production node src/homepage.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/marcoparrone/homepage#readme",
   "dependencies": {
-    "pug": "^3.0.0"
+    "pug": "^3.0.0",
+    "serve": "^11.3.2"
   },
   "devDependencies": {
     "@marcoparrone/translate-json": "^1.0.6",
