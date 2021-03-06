@@ -2,9 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const pug = require('pug');
 
-const github_icon = require('simple-icons/icons/github');
 const twitter_icon = require('simple-icons/icons/twitter');
-const npm_icon = require('simple-icons/icons/npm');
+const github_icon = require('simple-icons/icons/github');
 
 const baseurl = process.env.NODE_ENV === 'development' ? 'http://centos0:3000' : 'https://marcoparrone.com';
 
@@ -49,9 +48,8 @@ function write_localized_page(i18ndir, page, compiledPugFunction, outdir, langua
     let tmpobj = JSON.parse(tmpdata);
     tmpobj['language'] = language;
     tmpobj['baseurl'] = baseurl;
-    tmpobj['github_icon'] = github_icon;
     tmpobj['twitter_icon'] = twitter_icon;
-    tmpobj['npm_icon'] = npm_icon;
+    tmpobj['github_icon'] = github_icon;
     fs.writeFile(outdir + '/' + page + '.' + language + '.html',
       compiledPugFunction(tmpobj),
       err => {
