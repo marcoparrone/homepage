@@ -2,7 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const pug = require('pug');
 
-const baseurl = process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:8080' : 'https://marcoparrone.com';
+const github_icon = require('simple-icons/icons/github');
+const twitter_icon = require('simple-icons/icons/twitter');
+const npm_icon = require('simple-icons/icons/npm');
+
+const baseurl = process.env.NODE_ENV === 'development' ? 'http://centos0:3000' : 'https://marcoparrone.com';
 
 function createIndexFile() {
   fs.copyFile('build/index.en.html', 'build/index.html',
@@ -45,15 +49,18 @@ function write_localized_page(i18ndir, page, compiledPugFunction, outdir, langua
     let tmpobj = JSON.parse(tmpdata);
     tmpobj['language'] = language;
     tmpobj['baseurl'] = baseurl;
+    tmpobj['github_icon'] = github_icon;
+    tmpobj['twitter_icon'] = twitter_icon;
+    tmpobj['npm_icon'] = npm_icon;
     fs.writeFile(outdir + '/' + page + '.' + language + '.html',
-    compiledPugFunction(tmpobj),
-    err => {
-      if (err) {
-          console.error('ERROR: Cannot write file: ' + err.code + ' ' + err.message)
-          process.exit(1);
-      } else if (language === 'en') {
-        createIndexFile();
-      }
+      compiledPugFunction(tmpobj),
+      err => {
+        if (err) {
+            console.error('ERROR: Cannot write file: ' + err.code + ' ' + err.message)
+            process.exit(1);
+        } else if (language === 'en') {
+          createIndexFile();
+        }
     });
   }
 }

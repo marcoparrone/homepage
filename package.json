@@ -28,7 +28,8 @@
   "homepage": "https://github.com/marcoparrone/homepage#readme",
   "dependencies": {
     "pug": "^3.0.0",
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "simple-icons": "^4.13.0"
   },
   "devDependencies": {
     "@marcoparrone/translate-json": "^1.0.6",
