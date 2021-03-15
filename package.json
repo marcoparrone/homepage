@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/marcoparrone/homepage#readme",
   "dependencies": {
+    "firebase-tools": "^9.6.1",
     "pug": "^3.0.0",
     "serve": "^11.3.2",
     "simple-icons": "^4.13.0"
