@@ -6,7 +6,7 @@
   "main": "src/homepage.js",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "mydeploy.sh homepage",
+    "deploy": "firebase deploy",
     "start": "NODE_ENV=development node src/homepage.js; serve -l 3000 build/",
     "build": "NODE_ENV=production node src/homepage.js",
     "test": "echo \"Error: no test specified\" && exit 1"
