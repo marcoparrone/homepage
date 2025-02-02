@@ -5,7 +5,7 @@ const pug = require('pug');
 const twitter_icon = require('simple-icons/icons/twitter');
 const github_icon = require('simple-icons/icons/github');
 
-const baseurl = process.env.NODE_ENV === 'development' ? 'http://centos0:3000' : 'https://marcoparrone.com';
+const baseurl = process.env.NODE_ENV === 'development' ? 'http://centos0:3000' : 'https://marcoparrone.github.io';
 
 function createIndexFile() {
   fs.copyFile('build/index.en.html', 'build/index.html',

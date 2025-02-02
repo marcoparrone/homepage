@@ -11,7 +11,7 @@
 	{ "src": "favicon.ico", "sizes": "64x64", "type": "image/x-icon" }
     ],
     "lang": "en-US",
-    "start_url": "https://marcoparrone.com",
+    "start_url": "https://marcoparrone.github.io",
     "display": "standalone",
     "theme_color": "#ffffff",
     "background_color": "#000000"

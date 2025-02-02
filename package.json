@@ -6,7 +6,7 @@
   "main": "src/homepage.js",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "firebase deploy",
+    "deploy": "mydeploy.sh homepage",
     "start": "NODE_ENV=development node src/homepage.js; serve -l 3000 build/",
     "build": "NODE_ENV=production node src/homepage.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/marcoparrone/homepage#readme",
   "dependencies": {
-    "firebase-tools": "^13.4.1",
     "pug": "^3.0.0",
     "serve": "^14.2.1",
     "simple-icons": "^4.13.0"
